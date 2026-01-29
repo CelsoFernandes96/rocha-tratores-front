@@ -79,6 +79,22 @@
   color: var(--color-text-muted);
 }
 
+.stock {
+  margin-bottom: 0.75rem;
+}
+
+.inStock {
+  font-size: 0.85rem;
+  color: #16a34a;
+  font-weight: 500;
+}
+
+.outOfStock {
+  font-size: 0.85rem;
+  color: #dc2626;
+  font-weight: 500;
+}
+
 .actions {
   display: flex;
   flex-direction: column;

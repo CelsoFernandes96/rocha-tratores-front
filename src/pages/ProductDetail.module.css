@@ -94,6 +94,22 @@
   margin-bottom: 1.5rem;
 }
 
+.stock {
+  margin-bottom: 1rem;
+}
+
+.inStock {
+  font-size: 1rem;
+  color: #16a34a;
+  font-weight: 600;
+}
+
+.outOfStock {
+  font-size: 1rem;
+  color: #dc2626;
+  font-weight: 600;
+}
+
 .actions {
   display: flex;
   flex-direction: column;
@@ -132,8 +148,13 @@
   border-left: 1px solid var(--color-border);
 }
 
-.qtyButtons button:hover {
+.qtyButtons button:hover:not(:disabled) {
   background: var(--color-bg);
+}
+
+.qtyButtons button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .qtyButtons span {
@@ -150,10 +171,18 @@
   color: #fff;
   border-radius: var(--radius);
   transition: background 0.2s;
+  border: none;
+  cursor: pointer;
 }
 
-.addBtn:hover {
+.addBtn:hover:not(:disabled) {
   background: var(--color-accent-light);
+}
+
+.addBtn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  opacity: 0.7;
 }
 
 .help {

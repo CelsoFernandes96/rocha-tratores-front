@@ -26,11 +26,16 @@ export default function ProductDetail() {
 
   const installments = product.installments ?? 10
   const installmentValue = product.price / installments
+  const stock = product.stock ?? 0
+  const isOutOfStock = stock === 0
+  const maxQty = Math.min(qty, stock)
 
   const handleAdd = () => {
-    addToCart({ ...product, sku: null }, qty)
-    setAdded(true)
-    setTimeout(() => setAdded(false), 2500)
+    if (!isOutOfStock) {
+      addToCart({ ...product, sku: null }, Math.min(qty, stock))
+      setAdded(true)
+      setTimeout(() => setAdded(false), 2500)
+    }
   }
 
   return (
@@ -57,6 +62,13 @@ export default function ProductDetail() {
               </span>
             </div>
             <p className={styles.desc}>{product.description}</p>
+            {product.stock !== undefined && (
+              <div className={styles.stock}>
+                <span className={product.stock > 0 ? styles.inStock : styles.outOfStock}>
+                  {product.stock > 0 ? `Estoque disponível: ${product.stock} unidades` : 'Produto fora de estoque'}
+                </span>
+              </div>
+            )}
             <div className={styles.actions}>
               <div className={styles.qty}>
                 <label>Quantidade</label>
@@ -65,14 +77,16 @@ export default function ProductDetail() {
                     type="button"
                     onClick={() => setQty((n) => Math.max(1, n - 1))}
                     aria-label="Diminuir"
+                    disabled={isOutOfStock}
                   >
                     −
                   </button>
                   <span>{qty}</span>
                   <button
                     type="button"
-                    onClick={() => setQty((n) => n + 1)}
+                    onClick={() => setQty((n) => Math.min(n + 1, stock))}
                     aria-label="Aumentar"
+                    disabled={isOutOfStock || qty >= stock}
                   >
                     +
                   </button>
@@ -82,8 +96,9 @@ export default function ProductDetail() {
                 type="button"
                 className={styles.addBtn}
                 onClick={handleAdd}
+                disabled={isOutOfStock}
               >
-                {added ? 'Adicionado ✓' : 'Comprar'}
+                {added ? 'Adicionado ✓' : isOutOfStock ? 'Fora de Estoque' : 'Comprar'}
               </button>
             </div>
             <p className={styles.help}>

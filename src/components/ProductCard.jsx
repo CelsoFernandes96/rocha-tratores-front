@@ -32,6 +32,13 @@ export default function ProductCard({ product, showCategory }) {
             ou {installments}x de {formatPrice(installmentValue)} sem juros
           </span>
         </div>
+        {product.stock !== undefined && (
+          <div className={styles.stock}>
+            <span className={product.stock > 0 ? styles.inStock : styles.outOfStock}>
+              {product.stock > 0 ? `Estoque: ${product.stock} unidades` : 'Fora de estoque'}
+            </span>
+          </div>
+        )}
         <div className={styles.actions}>
           <Link to={`/produtos/${product.slug}`} className={styles.cartBtn}>
             Comprar
