@@ -1,0 +1,222 @@
+.footer {
+  margin-top: auto;
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+}
+
+.newsletter {
+  background: var(--color-primary);
+  color: #fff;
+  padding: 1.5rem 0;
+}
+
+.newsletterInner {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+@media (min-width: 768px) {
+  .newsletterInner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.newsletter h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.newsletter p {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.newsletterForm {
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+.newsletterForm input {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 1rem;
+}
+
+.newsletterForm input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-accent);
+}
+
+.newsletterForm button {
+  padding: 0.6rem 1.25rem;
+  background: var(--color-accent);
+  color: #fff;
+  font-weight: 600;
+  border-radius: var(--radius);
+  white-space: nowrap;
+}
+
+.newsletterForm button:hover {
+  background: var(--color-accent-light);
+}
+
+.main {
+  padding: 2.5rem 0;
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 960px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.col h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+}
+
+.footerLogo {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+}
+
+.footerLogo img {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+  object-position: left center;
+}
+
+@media (min-width: 480px) {
+  .footerLogo img {
+    height: 56px;
+  }
+}
+
+.col p {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.col ul {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.col ul li {
+  margin-bottom: 0.4rem;
+}
+
+.col ul a:hover {
+  color: var(--color-primary);
+}
+
+.contactItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.contactIcon {
+  flex-shrink: 0;
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+}
+
+.contactItem .contactIcon {
+  width: 18px;
+  height: 18px;
+}
+
+.mapItem {
+  margin-top: 0.5rem;
+}
+
+.mapLink {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  color: var(--color-text-muted);
+}
+
+.mapLink:hover {
+  color: var(--color-primary);
+}
+
+.mapLink .contactIcon {
+  color: #ea4335;
+}
+
+.addressLabel {
+  text-decoration: underline;
+}
+
+.social {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: var(--color-text-muted);
+  background: var(--color-bg);
+  border-radius: var(--radius);
+}
+
+.social a:hover {
+  color: #fff;
+  background: var(--color-primary);
+}
+
+.bottom {
+  padding: 1rem 0;
+  background: var(--color-bg);
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.bottomInner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  .bottomInner {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}

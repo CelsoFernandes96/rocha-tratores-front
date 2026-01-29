@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 80" fill="none" role="img" aria-label="Rocha Tratores">
+  <!-- Engrenagem verde escura: 8 dentes, buraco central -->
+  <g fill="#1e3d1a" transform="translate(0, 4)">
+    <path fill-rule="evenodd" d="
+      M 36 8
+      L 40.6 16.9 L 50.14 13.86 L 47.08 23.41 L 56 28
+      L 47.08 32.59 L 21.86 42.14 L 24.92 32.59 L 36 48
+      L 31.4 39.1 L 21.86 13.86 L 24.92 23.41 L 16 28
+      L 31.4 16.9 L 50.14 13.86 L 47.08 23.41
+      Z
+      M 36 28 m -8 0 a 8 8 0 1 1 16 0 a 8 8 0 1 1 -16 0
+    "/>
+  </g>
+  <!-- ROCHA -->
+  <text x="48" y="38" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" fill="#1a1a1a" letter-spacing="0.02em">ROCHA</text>
+  <!-- TRATORES -->
+  <text x="48" y="58" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="500" fill="#1a1a1a" letter-spacing="0.04em">TRATORES</text>
+</svg>

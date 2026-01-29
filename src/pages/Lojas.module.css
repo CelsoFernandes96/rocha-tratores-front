@@ -1,0 +1,83 @@
+.page {
+  padding: 2rem 0 3.5rem;
+}
+
+.page h1 {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.content {
+  max-width: 480px;
+}
+
+.card {
+  padding: 1.5rem;
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+}
+
+.card h2 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+}
+
+.card p {
+  color: var(--color-text-muted);
+  margin-bottom: 0.35rem;
+}
+
+.hours {
+  margin-top: 0.75rem;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.mapLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.25rem;
+  font-weight: 600;
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+}
+
+.mapLink:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background: rgba(45, 90, 39, 0.06);
+}
+
+.mapIcon {
+  flex-shrink: 0;
+  color: #ea4335;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.65rem 1.25rem;
+  background: #25d366;
+  color: #fff;
+  font-weight: 600;
+  border-radius: var(--radius);
+}
+
+.cta:hover {
+  filter: brightness(1.05);
+}

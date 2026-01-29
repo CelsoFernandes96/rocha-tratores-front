@@ -1,0 +1,63 @@
+.page {
+  padding: 2rem 0 3.5rem;
+}
+
+.page h1 {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.content {
+  max-width: 640px;
+}
+
+.content p {
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.services {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+}
+
+.services h2 {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 1rem;
+}
+
+.services ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.services li {
+  color: var(--color-text-muted);
+  line-height: 1.8;
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.services li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.services li strong {
+  color: var(--color-text);
+  font-weight: 600;
+}
